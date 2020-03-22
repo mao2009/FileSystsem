@@ -14,7 +14,6 @@ Public Function FileExists(ByVal path As String) As Boolean
     Dim FSO As Object
     Set FSO = CreateObject("Scripting.FileSystemObject")
     FileEsixsts = FSO.FileExists(path)
-    
 End Function
 
 Public Function FolderExists(ByVal path As String) As Boolean
@@ -24,7 +23,7 @@ Public Function FolderExists(ByVal path As String) As Boolean
     FolderExists  = FSO.FolderExists(path)
 End Function
 
-Public Function DriveExists (ByVal drive As String) As Boolean
+Public Function DriveExists(ByVal drive As String) As Boolean
     'ドライブの存在確認
     Dim FSO As Object
     Set FSO = CreateObject("Scripting.FileSystemObject")
@@ -172,8 +171,8 @@ End Function
 Public Function OpenTextFile(ByVal path As String, _
         Optional ByVal IOMode As Long = ForReading, _
         Optional ByVal Create As Boolean = False _
-        Optional ByVal fomatMode As Long = TristateFalse ) As Object
+        Optional ByVal fomratMode As Long = TristateFalse ) As Object
     Dim FSO As Object
     Set FSO = CreateObject("Scripting.FileSystemObject")
-    Set OpenTextFile = FSO.OpenTextFile(path, IOMode, Create, fomatMode)
+    Set OpenTextFile = FSO.OpenTextFile(path, IOMode, Create, fomratMode)
 End Function
